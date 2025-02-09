@@ -24,8 +24,8 @@ document.addEventListener('visibilitychange',
             $("#favicon").attr("href", "/assets/images/MyFavicon.ico");
         }
         else {
-            document.title = "Come Back To Portfolio";
-            $("#favicon").attr("href", "/assets/images/favhand.png");
+            document.title = "Om Kiran Kar | Solution Provider";
+            $("#favicon").attr("href", "/assets/images/MyLogo1.png");
         }
     });
 
