@@ -1,0 +1,341 @@
+[
+  {
+    "name": "Tactical Video Communication System",
+    "desc": "The Tactical Video Communication System is a ruggedized system for transmitting video and audio in challenging environments. The system includes a transmitter (downlink) available in 12V and 28V versions and a receiver (uplink) available in single-channel and three-channel versions. The transmitter uses digital COFDM modulation for robust transmission, supporting multiple bandwidth modes including an Ultra Low Narrow Band of 625 kHz, and uses H.264 compression for efficient video transmission, along with AES 256-bit encryption for secure transmission. The receiver supports decoding for H.264, MPEG-4 ASP, and MPEG-2 video formats, and features robust demodulation with a two-way diversity maximum ratio to mitigate fading. The system employs multiple components like microcontrollers, multiplexers, modulators, demodulators, ADC converters, daughter board, variety of antennas like omnidirectional and helical antennas, and uses a command packet structure to facilitate communication between the controller and controlled devices with different baud rates like 1200, 9600, etc. It also adheres to MIL-STD-2160 and MIL-STD-461E standards and uses different frequencies for downlink and uplink to avoid interference, with configuration managed through software and visual display units on both the transmitter and receiver.",
+    "image": "TVCS2",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1cb8O7f-cgXg-LKxwOXO-XTEIfqRj5fH6"
+    }
+  },
+  
+  {
+    "name": "Mission Tracker",
+    "desc": "The Mission Tracker application is a Python-based tool with a graphical user interface (GUI) built using PyQt5, designed to track the location of a mobile node and a Ground Control Station (GCS) while monitoring the Signal-to-Noise Ratio (SNR). The application fetches mission data from the GCS using HTTP requests via Garmin GPS, extracting information such as system time, latitude, longitude, SNR, and NodeID from GPS and SDR accordingly. This data is saved into CSV files, which can then be used to generate KMZ files for visualization in Google Earth. The GUI allows users to manage missions, set parameters like mission name, GCS IP address, and log time intervals (ranging from 2 to 20 seconds), and choose file locations for data storage. The KMZ files display tracked paths on Google Earth with color-coded icons that represent different SNR values, helping to visualize signal strength along the tracked path. The application requires that the users laptop is on the same network or subnet as the SDR, and will not detect the SDR if either the SDR or the laptops Ethernet port is in DHCP mode. The software is built using Python 3.12 and uses libraries like requests, csv, time, datetime, pandas, simplekml, base64, sys, threading, and PyQt5. The Python code can be packaged into a single executable file using PyInstaller. The application is designed to be used with a mobile node that has GPS capabilities and a Ground Control Station.",
+    "image": "MissionTracker1",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1Df-1bdKqtB72x45dgXrXhw0raf6-tDkF"
+    }
+  },
+
+  {
+    "name": "ATAK - Radio Plugin",
+    "desc": "The ATAK - Radio Plugins project centers on the development of two custom plugins for the Android Team Awareness Kit (ATAK): Exicom Plugin and Exicom Radio, built using ATAK SDK version 5.2.0.6, Java, and Groovy DSL, with tools such as Android Studio, Gradle Version 7.6.1, JDK Version 11, and Compile SDK Version 34. The Exicom Plugin is designed to broadcast alerts to all connected devices, using five flags for Fuel, Hit, Low Ammunition, No Ammunition, and Electronics Failure. When triggered, these flags cause devices to vibrate, display the alert, send a corresponding message and blink the node that triggered the alert, and the plugin also displays GPS coordinates from an external GPS connected to the radio, with a toggle switch for controlling the GPS. The Exicom Radio plugin provides a centralized interface for radio control and monitoring. It includes a Radio Web View button that opens the radios Web User Interface (WUI), a Radio Health Status section displaying parameters like Detected IP, Latitude, Longitude, Node ID, and SNR, and a Kill Switch. The Kill Switch, intended for emergency use, when activated, prompts for confirmation before deleting the entire ATAK folder on the device and resetting the radios configuration to default. The plugins use various components, such as PluginTemplateDropDownReceiver.java for UI elements, ExicomRadio.java for IP scanning and data fetching, FourButton.java for the alert system, HealthStatus.java for monitoring radio health, RadioIpScan.java for scanning IP addresses, and WebViewDropDownReceiver.java for web content integration. The project aims to centralize radio operations, monitor health status, display navigation parameters, provide an alert system, and offer an emergency kill switch, all integrated within the ATAK environment.",
+    "image": "ATAK2",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1jGsmf26Ft2istKrrhhtYJy55NI0kO4VG"
+    }
+  },
+
+  {
+    "name": "Node Finder",
+    "desc": "The Node Finder project is a Python-based application designed to discover and manage networked devices on a local network, using a PyQt5 graphical user interface (GUI). The applications primary function is to find the IP address of a connected Software Defined Radio (SDR). The tool requires that the laptop is on the same network or subnet as the SDR, and it will not detect the SDR if either the SDR or the laptops ethernet port are in DHCP mode. The application uses the psutil and socket libraries to retrieve the laptops active Ethernet IPv4 addresses. It then scans a local subnet for devices running an SSH server (port 22) using multi-threading for faster execution. The GUI displays information about discovered network devices in a table format, including details like IP Address, Unit Name, Version, ESN, and DHCP status. The application fetches configuration files from the devices using HTTP requests via the requests library, and extracts specific values using regular expressions. Users can interact with the devices via a right-click context menu, which provides options to open the devices web interface, configure network settings, and trigger a Flash LED action on the device. The network configuration is managed via a dialog that allows users to modify IP settings such as DHCP, IP address, subnet mask, and gateway. The application also features a filter option to filter the table rows based on input text. The applications UI is created using PyQt5, with icons and images embedded into the code via base64 encoding. The Python code can be packaged into a single executable file using PyInstaller.",
+    "image": "NodeFinder2",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1Z-nlQox72PPTySz38BRcIsdFtTXdTeh_"
+    }
+  },
+
+  {
+    "name": "MAC Scanner",
+    "desc": "The MAC Scanner project is a Windows Presentation Foundation (WPF) application developed in C# using Visual Studio Community 2022, designed to find the MAC address and subsequent IP address of networking devices (ODU and IDU) connected to a laptops ethernet port. The application scans the network to detect devices with a specific Organizationally Unique Identifier (OUI) prefix. Once a device is detected, the application displays its MAC address, IP address, and unit type in a tabular format. The application also includes functionality to open the devices Web User Interface (WUI) in the default web browser by constructing a URL from the devices IP address. The application uses libraries like PacketDotNet and SharpPcap for packet capture and analysis, and the UI is built using WPF with XAML for design and C# for logic. The application also provides a window to show the local Ethernet IP address and MAC address. The project is designed to simplify the process of identifying and accessing devices in the field, particularly when dealing with multiple units of ODU and IDU.",
+    "image": "MacScanner2",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1KadanAYHVWDYGITN_w688tVdW7uJmZz8"
+    }
+  },
+
+  {
+    "name": "Exicom Wesbite",
+    "desc": "The Exicom Website Management project was an extensive undertaking that required significant coordination with senior executives to ensure the website met the organizations evolving needs. This project involved a comprehensive approach to both front-end and back-end development. The front-end development utilized HTML, CSS, and JavaScript to create an engaging and interactive user interface, focusing on both aesthetics and functionality. The back-end development, which used PHP in conjunction with a MySQL database, was crucial for managing the sites dynamic content and user data. A Form Integration API was implemented to streamline data handling through various website forms. Key tasks included making styling and alignment changes to improve the sites visual coherence, guaranteeing that the website was fully responsive across different devices, and creating compelling content for the site’s blogs and news sections. To gain insight into user behavior and website performance, Google Analytics was used for data tracking. The website was hosted on Hostinger, using the Xampp Control web server environment to manage the server. The project also involved the purchase and ongoing management of the domain name through GoDaddy.",
+    "image": "ExicomWebsite1",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1pRfkQidKxhyjQept5ChBY-wuMHD3bbsb"
+    }
+  },
+
+  {
+    "name": "PAS - Project Management",
+    "desc": "The PAS (Paratrooper Assistance Software) project is focused on the development and management of software tools to aid paratroopers in planning and executing missions, with the project being part of a larger defense research and development effort. The project encompassed two key software applications: PUS (Paratrooper Unit Software), an Android-based mobile application designed for use by paratroopers in the field, and MPS (Mission Planning Software), a desktop application intended for mission preparation and analysis. The PUS application was deployed on FP600 ruggedized tablet, with communication between devices facilitated by a Software Defined Radio (SDR), specifically Condor Lite-1W version 7.2.4. Project management involved coordinating with an outsourced development team, and internal scientists, while also tracking progress using an excel sheet and ensuring compliance with RTCA 0178B standards for documentation, and IMATR Form standards for software problem reports using SCMP (Software Configuration Management Plan) templates. Responsibilities included auditing the development process, creating documents for SRD (Software Requirement Document) and SVCP (Software Verification and Cases Procedure), and organizing meetings to address any issues. The MPS application, developed in C#, provides a user-friendly interface for setting mission parameters such as Desired Landing Points (DLPs), release points, allows for the export of mission files with maps and other data. The PUS application, built using Kotlin and Java, receives data from MPS and offers real-time information and navigation tools, including compass navigation, team member visibility, and chat functionality. The project also involved field testing, demonstrations, and efforts to achieve CEMILAC certification for the radio, ensuring that the software and hardware met specific defense sector standards.",
+    "image": "PAS1",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/19SnCrZ9nORYE0YlvdB_nA8FEiO7mY2zm"
+    }
+  },
+
+  {
+    "name": "Smart Stair Lift System",
+    "desc": "The Smart Stair Lift System project centers on the creation of an automated stair lift, employing an Arduino Mega 2560 for comprehensive control and incorporating multiple safety measures. The systems power is supplied by two 12.8V, 24Ah batteries connected in series to deliver 25.6V, which drives a 300W motor. The MD20A motor driver, managed by the Arduino through PWM and DIR signals, dictates the motors speed and direction using an H-Bridge logic. User interaction is facilitated via arrow buttons for directional control and a stop button. Safety features include ultrasonic sensors that detect obstacles along the lift path, which are connected to the Arduino using specific digital pins for trigger and echo signals. Limit switches are installed at the railing ends to halt the lifts movement, connected to the Arduino using a normally closed (NC) configuration to provide a low signal when the lift is within range and a high signal upon reaching the limit. Additionally, a control panel key switch serves as a system lock, wired in series with the main power or connected to a digital input pin on the Arduino, and a push button control block provides a manual stop option using digital pins on the Arduino. The system is designed to ensure smooth and safe operation, with the Arduino Mega 2560 acting as the central control unit for all aspects of the lifts movement and safety features.",
+    "image": "SmartStairLiftSystem1",
+    "category": "freelance",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/19XUxN31g8lExqeAtr0rHASKCyalGkSLF"
+    }
+  },
+
+  {
+    "name": "Custom Camera",
+    "desc": "This project involved the integration of a LuckFox Pico RV1103 development board with a camera sensor to create a cost-effective alternative to expensive industrial cameras. The LuckFox Pico board, featuring an ARM Cortex-A7 processor, an integrated ISP (Image Signal Processor) and an NPU (Neural Processing Unit), was chosen for its ability to perform real-time image processing and AI tasks. The project utilized a Waveshare SC3336 camera module, known for its high sensitivity, low-light performance, and low cost. This setup provided features like HDR, WDR, and noise reduction enabled by the ISP, and allowed for potential AI applications, with software support including Linux-based systems like Buildroot and Ubuntu 22.04. The project involved setting up the development environment on a Linux-based PC, installing necessary drivers, flashing firmware, configuring network settings, and integrating the camera module using its MIPI CSI-2 lane interface. The camera stream was accessed using VLC Media Player with an RTSP stream URL, and programming was done using Python with AI frameworks like TensorFlow Lite and ONNX. The project provided a significantly more affordable solution compared to existing industrial cameras.",
+    "image": "CustomCamera1",
+    "category": "freelance",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1DcjMCRuFcHAFBaAt_zcMjfrRqy44wkNW"
+    }
+  },
+
+  {
+    "name": "Smoke Detection with Fire Prevention",
+    "desc": "This project focuses on the development of an IoT-based Smart Fire Detection and Alarm System, created to enhance safety in residential environments by providing early detection of fire hazards. The system is designed to detect smoke using a smoke sensor which, when it exceeds a threshold of 0.5, sends a signal to a central Home Gateway router. This router then triggers a series of actions including sending a notification to the users smartphone via an application, and initiating responses in connected home appliances. These automated responses include opening doors and windows to allow for ventilation, activating fire sprinklers to suppress the fire, and sounding a siren to alert occupants. The system was developed using Cisco Packet Tracer to simulate the network and IoT devices, and a web-based interface allows users to monitor and control the system in real time. The project emphasizes a cost-effective and reliable approach to fire prevention, tackling challenges like false alarms by fine-tuning the smoke detection threshold. The systems design includes a range of components such as smoke detectors, a home gateway, doors, windows, fire sprinklers, sirens, and a smartphone interface, all working in a coordinated manner. It also includes a garage door that opens to release smoke and gases. The system uses dynamic IP addresses for each device via DHCP. This smart fire detection and alarm system provides an automated solution to prevent fires from spreading and provides early warning to occupants, particularly benefitting households with young children or elderly individuals.",
+    "image": "SmokeDetection1",
+    "category": "academic",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1zuVNxAeeJIJ_QeX2ONAOKJuz3kRRoQji"
+    }
+  },
+  
+  {
+    "name": "Protection Based Door Lock System",
+    "desc": "The Password-Based Smart Door Lock System is a security project designed to address the limitations of traditional mechanical door locks by implementing a password-protected electronic system. The system is built around an 8051 microcontroller which serves as the core control unit, managing interactions between a 4x3 keypad for password entry, a 16x2 LCD display for user feedback, and a servo motor that controls the physical locking mechanism. The user inputs a password via the keypad, and the microcontroller checks it against a pre-defined password stored in memory. Upon successful password verification, the servo motor rotates, unlocking the door, and the LCD displays a welcoming message, whereas an incorrect password results in an error message on the LCD and the door remains locked. The system is designed to allow users multiple attempts to enter the correct password. The system was developed using Keil µVision for writing and debugging the embedded C code, and Proteus Design Suite for simulating the circuit design before physical implementation. The project uses an 11.0592 MHz clock frequency to ensure the code runs smoothly. The systems design can be expanded to include features like biometric authentication, remote access via a web or mobile interface, or sensor integration for automated emergency responses.",
+    "image": "DoorLock1",
+    "category": "academic",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/18pNQSY7GH-e7-YpRlH9S9eoZr0btLzr3"
+    }
+  },
+
+  {
+    "name": "Premier League Database",
+    "desc": "The Premier League Database Management System is a comprehensive project aimed at creating a structured and scalable solution for managing data related to the English Premier League. The system utilizes a relational database model to efficiently store, update, and retrieve information about various aspects of the league, including teams, players, coaches, stadiums, and match records. The database is designed with key entities such as Team (with attributes like TEAM_ID, TEAM_NAME, RATING, LOCATION, and STADIUM_ID), Player (including PLAYER_ID, F_NAME, L_NAME, AGE, SALARY, POSITION, TEAM_ID, GOALS, ASSIST, and CLEANSHEET), Coach (with COACH_ID, COACH_NAME, AGE, and TEAM_ID), Stadium (with STADIUM_ID, STADIUM_NAME, LOCATION, and STADIUM_CAPACITY), and Match Records (containing MATCH_ID, DATE, HOME_TEAM, AWAY_TEAM, and STADIUM_ID). These entities are linked through defined relationships like plays_for (a many-to-one relationship between players and teams), manages (a one-to-one relationship between coaches and teams), plays_at (a one-to-one relationship between teams and their home stadiums), and plays_against (a one-to-one relationship representing matches between home and away teams). The system uses SQL for database management and querying, and is implemented using MySQL. It supports various queries for data retrieval and analysis, such as finding high-rating teams, the youngest coach, top-paid players, and players from specific teams, along with updating team ratings and finding the stadium with the highest capacity. The project provides an automated way to manage football league data, enhancing accuracy and enabling detailed analysis, while also being scalable for other football leagues or additional features.",
+    "image": "PremierLeague1",
+    "category": "academic",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1VZmHi1pKPHjzqNMhcpnRDBOOUfTTo4Vv"
+    }
+  },
+
+  {
+    "name": "Home Automation",
+    "desc": "The Home Automation System integrates a variety of features to enhance a users living space, comprising of four main components: Home Automation, Automatic Security System, Automatic Sanitizer Dispenser, and a Music Player. The Home automation system uses an Arduino UNO along with a Bluetooth module (HC-05) to communicate with a custom mobile app built using MIT App Inventor. This allows for remote control of home appliances like lights, fans, and a servo-controlled door, with the Arduino managing the device control based on the commands sent from the mobile app. The automatic security system employs an IR sensor and a pressure-sensitive mat to detect potential intrusions. When either motion is detected or pressure is applied, the system triggers a buzzer and a light as an alarm. The automatic sanitizer dispenser uses an IR sensor to detect the presence of a hand, activating a pump to dispense sanitizer, which promotes touchless hygiene. Additionally, a Raspberry Pi is used as a music player that utilizes GPIO pins to output sound through a speaker. The music players functionality is achieved through Python code that uses libraries such as pulseio or PWM, pin, and time to control the frequency of pulses sent to the speaker, determine the pitch of the sound, and add delays to control timing. The music player features LEDs that toggle with each note change, providing visual feedback. The system can play different melodies by adjusting song data and mapping notes to frequencies in a Python dictionary. This integrated system demonstrates the versatility of combining various technologies, enhancing convenience, security, hygiene, and entertainment within a unified smart home environment.",
+    "image": "HomeAutomation1",
+    "category": "academic",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1hRCKawtEqMHAcnDw5xh6VLOhTL8xbHwV"
+    }
+  },
+
+  {
+    "name": "Development and Deployment of AlphaTrade Application",
+    "desc": "The AlphaTrade Application is a sophisticated web application developed to aid traders in making well-informed decisions by offering a user-friendly dashboard that features stock market predictions. The applications primary goal is to mitigate risk for investors by utilizing historical stock market data and various technical analysis indicators to forecast the best times for buying or selling shares. The frontend is built with ReactJS, providing an interactive and dynamic user interface for users to view stock trends and indicator strategies. The backend is powered by Python, which fetches and processes historical stock data from sources like Yahoo Finance, and uses libraries like yfinance, pandas, matplotlib, pandas_ta for technical indicator calculations and visualizations. The backend also utilizes Node.js for server-side management. The application calculates various technical indicators, including Moving Averages (MA), Bollinger Bands, and the Relative Strength Index (RSI), to generate buy/sell signals. These signals are displayed as graphical markers on price charts, with green indicating a buy and red indicating a sell. The system is deployed on Amazon Web Services (AWS), utilizing services such as EC2 for hosting, S3 for data storage, RDS for database management, and CloudFront for efficient content delivery. The application aims to provide a predictive model with up to 60% accuracy to assist users in making profitable trades. The project also includes a comprehensive methodology that involves literature review, data collection, implementation of technical indicators, backend and frontend development, as well as challenges in data quality and model accuracy, with solutions being data from trusted sources and using a combination of indicators.",
+    "image": "AlphaTradeApplication1",
+    "category": "academic",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1eSWxrP1h8gog07VzANIB5oqyjtK0ZxVN"
+    }
+  },
+
+  {
+    "name": "Design of Inset Feed Microstrip Antenna",
+    "desc": "This project focuses on the design of an inset feed microstrip patch antenna for applications in the 2.4 GHz ISM band, aiming to improve bandwidth and return loss. The antenna utilizes RT-Duroid as a substrate due to its low dielectric constant of 4.4, which helps reduce dielectric losses. The design process involved calculations for patch dimensions using established equations, and simulations were performed using CST Microwave Studio and HFSS. The inset feed technique was implemented to optimize impedance matching. The antenna achieved a return loss of -40.5 dB, a gain of 6.69 dBi, and an operational bandwidth of 80 MHz. The simulated far-field radiation patterns are suitable for wireless applications. This design is particularly suited for RFID systems, wireless communication networks, and supply chain automation. The project successfully demonstrates how innovative design techniques can overcome challenges faced by microstrip antennas, providing a cost-effective solution for various industries. The patch antenna is fed with a microstrip line connected to a point inside the patch, with an input impedance of 50 ohms, and the inset feed is at a distance of 7mm. The antenna was simulated using HFSS software at a resonant frequency of 2.22 GHz.",
+    "image": "InsetFeedMicrostripAntenna1",
+    "category": "academic",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1E8QBeWibKMnXsyDPUwKWRBe-9TGkk-9p"
+    }
+  },
+
+  {
+    "name": "Automated Doorbell System",
+    "desc": "This project details the creation of an automatic contactless doorbell system designed to eliminate the need for physical contact, promoting hygiene and safety. The system employs an infrared (IR) sensor to detect the presence of a person near the door. When someone steps onto a pressure-sensitive mat, a push button under the mat is activated which triggers the IR sensor. Upon detecting infrared radiation, the sensor activates a buzzer, signaling a visitors presence. The system is built using readily available components like a PCB board, jumper wires, and a 5V battery, ensuring both affordability and ease of replication. The circuit design was simulated using TinkerCAD and designed with Eagle Software, before being implemented in hardware. While lacking advanced features like video streaming or remote monitoring found in IoT-based systems, this design provides a basic contactless solution, offering an economical and practical alternative. Future improvements could include security enhancements like user authentication, integration with smart devices, and improved sensor sensitivity. The project demonstrates an innovative solution to enhance hygiene and safety using basic electronic components, providing a foundation for further development.",
+    "image": "DoorbellSystem1",
+    "category": "academic",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1PJtbSLfjC571AMTp-1KzNq3-0J4nha2V"
+    }
+  },
+
+  {
+    "name": "Ka-Band Pattern Reconfigurable Patch Antenna",
+    "desc": "This project presents the design and analysis of a Ka-band pattern reconfigurable patch antenna using RF Micro-electromechanical Systems (RF MEMS) switches, achieving a compact size of 4 mm × 5 mm × 0.4 mm. The antenna consists of a main patch, two assistant patches, and two RF MEMS switches, fabricated on a high-resistivity silicon substrate. By changing the states of the RF MEMS switches, the antenna can switch among three radiating patterns with main lobe directions of approximately -17°, 0°, and +17° at 35 GHz. The RF MEMS switches provide low insertion loss, high isolation, and do not consume DC power. The design was optimized through extensive simulations using HFSS software, and real-world measurements using an Agilent PNA N5442A network analyzer confirmed the effectiveness of the design. The antenna achieves good impedance matching and return loss greater than 10dB. This design offers advantages over traditional antennas by having a compact structure, reconfigurable radiation patterns, and no need for array architecture. The antennas characteristics make it a potential candidate for 5G mobile communication and satellite communication systems. The far-field vector addition model was used to analyze the pattern, with good agreement between measured, analytical, and simulated results. The optimized RF MEMS switch design includes an anchor, beam, and λg/4 sector open stub, with an actuation voltage of approximately 15.8 V.",
+    "image": "KaBand1",
+    "category": "academic",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1i_eqZvTTPUHhur5KlTteF57-4wv0A9in"
+    }
+  },
+
+  {
+    "name": "BATS (Battlefield Antenna Tracking System)",
+    "desc": "The BATS (Battlefield Antenna Tracking System) project focuses on the development of a Ground-to-Air system that utilizes AATS (Antenna Aiming and Tracking Software) to track targets such as drones and unmanned vehicles. The system is controlled through a web interface, accessible via browsers like chrome, with a recommendation against using Internet Explorer due to security vulnerabilities. The BATS system uses a Yagi Uda sector antenna with a 30-degree beam width for tracking. AATS has three user accounts: administrator (read/write/operate access), user (read/operate access), and developer (full access), with the administrator and user accounts having default username and passwords. Upon logging in, the system status page displays key information such as firmware version, IP addresses, radio data, positioner data, and GPS data, and provides status indicators using colors to show component connections. Targets are organized into groups which can be enabled or disabled, which then affects the targets in the group. The system supports various radios, including Silvus StreamCaster and Persistent Systems MPU5. Configuration involves setting parameters such as beam width, beam height, and max distance. The system uses RSSI or SNR values, which are configurable through link groups, to maintain the link while tracking the target. The system also uses remote GPS data to aid in tracking, with an icon in the header bar indicating the number of targets providing valid GPS data. Initial target acquisition may require manual adjustments before the system can begin automatic tracking using RF and/or GPS data.",
+    "image": "BATS1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1kTfhL6-3fr8btjgMg6dDcNahOaqKbVRX"
+    }
+  },
+
+  {
+    "name": "AAT, PixHawk, SDR - Integration",
+    "desc": "The AAT (Automatic Antenna Tracker), Pixhawk, SDR Integration project is a complex system designed for accurate target tracking using GPS and telemetry data, involving the interconnection of several key components. The Pixhawk 6C flight controller serves as the central processing unit, receiving GPS data from a Neo-6M GPS module via its GPS1 port, using Vcc, GND, and UART connections, with the Neo-6M having a baud rate of 9600. The GPS data is then transmitted via an SDR (Software Defined Radio) using an Ethernet connection, with the SDR connected to the Pixhawks Telem2 port via UART and GND connections and configured for UDP communication at a baud rate of 115200. A Mini Crossbow Antenna Tracker receives MAVLink data from the SDR through its R-Connector via RX and GND connections, enabling the tracker to orient itself towards the target. The Pixhawk 6C is configured using Mission Planner software, where the baud rate for the Neo-6M GPS is set to 9600 and the Telem2 port for MAVLink communication is set to 115200. An optional Garmin LVC GPS can be connected to the Mini Crossbow Antenna Trackers L-Connector using TX, RX, GND, and voltage supply connections, with the Garmin GPS having a baud rate of 4800.",
+    "image": "AAT,PixHawk1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1pAqjltj6Ku19I-FpiHQZb-nG6A10XcZu"
+    }
+  },
+
+  {
+    "name": "Digilens Argo3 and SDR Integration",
+    "desc": "The DigiLens and SDR Integration project focuses on the configuration of a DigiLens ARGO-3 augmented reality wearable and its integration with an SDR (Software Defined Radio) for enhanced data transmission and application in various scenarios. The DigiLens ARGO-3, designed for enterprise and industrial use, provides a transparent display that blends digital information with the physical environment, and runs on DigiOS, a specialized operating system based on Android 12. This device can be configured using Vysor, a program that mirrors the devices screen to a computer, allowing for mouse and keyboard control, file uploads via drag and drop, and IP address configuration by installing ATAK. The ARGO-3 can be used by personnel at a Ground Control Station (GCS) to stream video captured by remote nodes. Integrating with an SDR enables real-time data transmission to the AR device, facilitating features like remote collaboration, sensor data integration, and enhanced situational awareness. The Digilens ARGO-3 is equipped with features such as a high brightness display of over 3500 nits, a wide field of view, and 6 Degrees of Freedom (6DoF) tracking.",
+    "image": "Digilens1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/17T6rUTiPKsI3Il22ONw8-Z1dD_K4fTG6"
+    }
+  },
+
+  {
+    "name": "FXO & FXS - Networking Interface",
+    "desc": "The FXO and FXS Networking Interface project involves the configuration and integration of FXO (Foreign Exchange Office) and FXS (Foreign Exchange Subscriber) devices to establish a Voice over Internet Protocol (VoIP) communication system. The FXO device acts as a server (also known as IDU or Indoor Unit), connecting to a telephone junction box and functioning as a connection to a Public Switched Telephone Network (PSTN) line or a Private Branch Exchange (PBX). The FXO device is configured using a laptop via an Ethernet connection. It supports both router and bridge network modes, allowing for DHCP or static IP configurations. The FXS device functions as a client (also known as ODU or Outdoor Unit), providing dial tone and ringing voltage to analog devices like telephones. Multiple FXS devices can connect to a single FXO. The FXS connects to analog phones via telephone wires and is configured through the FXO. The system uses telephone wires to connect the FXO to the telephone junction box and FXS to analog telephones. Ethernet cables are used for connecting the FXO to a laptop and for networking between the FXO and FXS, potentially through mesh radios. The FXO and FXS devices can be deployed in various scenarios, including establishing communication in forward operating bases, supporting disaster relief, facilitating training exercises, and creating backup communication systems. This system offers a cost-effective and easy-to-use VoIP solution with features like call routing, voice/fax capabilities, and maintenance/management options.",
+    "image": "FxoFxs1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1m36UxSOhGSFQQRCzNAfskRVpl1BT4zhe"
+    }
+  },
+
+  {
+    "name": "Reverse Engineering",
+    "desc": "The Reverse Engineering project involves the process of decompiling and recompiling an executable (.exe) application using various software tools. The goal is to analyze and potentially modify the applications functionality. This process begins with using Ghidra to reverse engineer the EXE file, which involves importing the file into Ghidra, performing initial analysis, exploring the code, and identifying key functions. Optional modifications to the code can be done using Ghidras disassembler and the HxD Hex Editor, and resources like icons and metadata can be altered using Resource Hacker. The modified EXE is then tested using x64dbg for dynamic analysis and in a virtual machine for sandbox testing. Finally, the modified EXE is repackaged into an installer using Inno Setup, which involves creating a new script, editing it if necessary, and compiling the installer. The process is documented thoroughly. This project can be used for purposes such as modifying legitimate software, bypassing certain checks, or analyzing and repackaging malware in a controlled environment. However, challenges can arise, such as the complexity of the decompiled code, security restrictions, and the difficulty of modifying hexadecimal values.",
+    "image": "ReverseEngineering1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1R3RIiJlT28mUvZ6d_Hb8nWQlRINa3FhK"
+    }
+  },
+
+  {
+    "name": "MReX - Telemetry",
+    "desc": "The MReX-51O telemetry module was evaluated and tested, with a focus on frequency settings, serial communication, encryption, current consumption, LED indications, and RF power output. The module operates in half-duplex mode and has a frequency range of 421-480 MHz. It has a maximum transmission output of 20 dBm (100mW) and a maximum reception input of 13 dBm. The MReX-510 supports various baud rates and channel spacing combinations. The device has a reboot behavior where the green LED blinks slowly for the first 15 seconds, allowing configuration, and then blinks rapidly after 15 seconds to indicate serial operation. The red LED glows during message transmission. The modules RF output was measured at different power levels and voltage inputs. The MReX-510 telemetry module supports only five configurations: 512_6, 512_12, 1200_12 for RX, and 512_12 and 1200_12 for TX. The report also raises a question about the ability to modify parameters after 15 seconds without power cycling, once the data link between the two telemetry units is established.",
+    "image": "MReX1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1BY35BUuQbDhTME7PY40H6NaO7i4Nhxiy"
+    }
+  },
+
+  {
+    "name": "Scanphone",
+    "desc": "The Scanphone project involves the use of a portable EM-Scanphone system, which integrates a smartphone (OnePlus 7T Pro) with removable EM field sensors to map electromagnetic emissions. The system features an augmented reality interface that overlays EM field measurements directly onto a camera view for intuitive visualization, supporting customizable grid-based mapping with adjustable resolution, size, and orientation. The EM-Scanphone app automatically launches when the sensor is connected via USB-C and provides real-time controls, including measurement display, a distance indicator, a sensor representation, a dynamic color scale, and settings for grid transparency and sensor diameter. It has advanced functions like screenshot capture, augmented reality integration, prescan, and data export. The system captures data that adheres to the IEC 61967-1-1 standard and can export it in XML format, along with raw data (DAT) and captured scene images (JPG). Additional supported formats include OBJ (for 3D objects), FFS (for far-field source data), and LXD (a combined compressed file), with a PC viewer available for in-depth analysis and MATLAB compatibility for scientific research. The Scanphone can be used for electromagnetic compatibility (EMC) testing, electromagnetic interference (EMI) troubleshooting, antenna characterization, and educational purposes.",
+    "image": "Scanphone1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/176L4hqmlDb7xGa1RkxdNK1eBpcNU7iXQ"
+    }
+  },
+
+  {
+    "name": "Serial Data, Ethernet Integration",
+    "desc": "This RND project focuses on establishing communication between devices using serial interfaces (RS232, RS422, RS485) and Ethernet networks. This involves the use of devices like the Brainboxes US-342 USB to serial adapter, DT-9003 RS422/485 to RS232 converter, USB Expert USB to RS485 to bridge serial communication to a laptop via USB. The DT-9003 is configured through the Device Manager by identifying its COM port, and its settings must match those of other devices in the system. Similarly, Brainboxes and USB Expert devices are configured through the Device Manager. Necessary drivers are required for DT-9003,Brainboxes and USB Expert. The project also uses devices like the MOXA 5130A RS422/RS485 Serial device, which converts serial data to Ethernet, enabling communication over a network. The MOXA 5130A is configured using NPort Administrator, where the IP address and serial settings are established, and the device operating mode is set. Tera Term and PComm Terminal Emulator are used to establish communication between devices connected via serial or Ethernet connections. The project demonstrates methods for data transmission between two laptops using these converters, between a laptop and a radio, and the verification of the operational status of the devices. The goal is to ensure seamless data transfer and to confirm that the correct data is being received at the destination by sending text between devices.",
+    "image": "SerialDataEthernet1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1agz88l3Z6xl4iJhBJGnyFAjnZj-qVN0y"
+    }
+  },
+
+  {
+    "name": "SDR and Amplifier Calibration",
+    "desc": "The SDR & Amplifier Calibration project was crucial for ensuring the accurate and consistent performance of radio transmissions. This involved meticulous calibration of the Software Defined Radio (SDR) at five distinct frequencies to guarantee even RF power transmission across the entire bandwidth. Each output port of the SDR was calibrated at specific power ranges, carefully considering both high and low linearity settings, which directly affect the RF signals shoulder performance during transmission. Calibration also included various amplifiers, such as low noise amplifiers, using a power meter with precise attenuation to avoid damage. The process was carried out with a specific password and preset configurations on the SDR. The amplifiers used in the calibration included DTC amplifiers with either SDRC or COFDM modulators, offering options for both bypass and non-bypass configurations, and various power levels, specifically 2x1W, 2W, and 5W. This ensured that the radios and amplifiers could be used in different scenarios requiring different power and signal characteristics.",
+    "image": "AmpliferSDR4",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1Ow2AZqby8wJ-1jvY2UcNY-XZNwuEIlMz"
+    }
+  },
+
+  {
+    "name": "RF Planning and Strategizing",
+    "desc": "The RF Planning & Strategizing project involved a detailed process of understanding client requirements to plan the best testing approach and locations. This included the creation of a comprehensive Standard Operating Procedure (SOP) that listed all necessary components, both software and hardware, to ensure consistent and repeatable testing. The project required the creation of block diagrams for each testing location, detailing the integration and connectivity of all system components. This work also involved the selection of appropriate antenna types, connectors, and RF cables, alongside choosing suitable SDRs and determining the number of antenna ports. Key considerations included signal attenuation, the required frequency bands, and evaluating the impact of any line-of-sight obstructions. The project also covered planning for all required electronic and networking components, which included cameras, headphones, and amplifiers. Furthermore, the plan specified critical parameters such as streaming type, bandwidth, and attenuation. This complete approach allowed for a structured and efficient RF testing strategy tailored to specific project needs.",
+    "image": "RFPlanning1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1cdGVAFdg-mplvcwKIZyUqp2bKHXpXUTf"
+    }
+  },
+
+  {
+    "name": "Electronics QC and Testing",
+    "desc": "The Electronics & QC project was focused on guaranteeing the quality and reliability of all electronic components and systems. This involved conducting visual inspections to identify any physical defects, performing connectivity checks to ensure proper electrical connections, and verifying components at a granular level before they were integrated into larger systems. The project used a variety of test equipment, including current limiters and power supplies, to ensure the components functioned as expected. The types of components tested ranged from power amplifiers and automatic switching units (ASUs) to DC-to-DC converters, FXO switchboards, batteries, current limiters, and a wide array of cables. Testing also covered RF components, including bandpass filters, bias tees, and splitters using spectrum analyzers to measure parameters like insertion loss and isolation loss. This meticulous process also ensured that digital video recorders (DVRs) were fully functional, checking parameters such as the 12V power supply, firmware integrity, the functionality of LEDs, and controller interfaces.",
+    "image": "ElectronicsQC1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1IIIatLlzkEPUU6UNmuvWQcXTgLn7EYaT"
+    }
+  },
+
+  {
+    "name": "SDR - Inhouse Testing",
+    "desc": "The SDR - In-House Testing project involved a rigorous series of tests designed to evaluate the performance of the SDRs. This included a self-interference test conducted in both Single Mesh and Mesh Ultra-M modes, with various channel bandwidths, to ensure that the radio could mitigate its own interference. RF power measurements were conducted at multiple frequencies and linearity settings for all output ports to verify accurate power transmission. Receiver sensitivity was assessed by measuring the Signal Quality Threshold (SQT), Signal-to-Noise Ratio (SNR), and Received Signal Strength Indicator (RSSI) across various bandwidths. Data rate tests were carried out to establish the achievable data rates at different signal strengths and bandwidths. The radio’s ability to establish and maintain mesh network connections was evaluated through thorough mesh formation tests. Finally, the functionality of crucial interfaces, such as Serial Communication, Audio, Video, and USB, were verified to confirm seamless integration with external devices and systems.",
+    "image": "SDRTesting1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1cdGVAFdg-mplvcwKIZyUqp2bKHXpXUTf"
+    }
+  },
+
+  {
+    "name": "Gym Trainer Portfolio",
+    "desc": "This website was a freelancing endeavor aimed at building a modern, user-friendly platform for a fitness professional to showcase their services. Developed using React and Tailwind CSS, the project leveraged free and simple tools to maintain cost-effectiveness. Form handling and validation were implemented using open-source libraries like Formik, while Axios ensured efficient API communication. Contact with the gym trainer was facilitated through a free email integration service like EmailJS. The website featured a dynamic class scheduling section, customizable service details, and a vibrant gallery for client testimonials and transformation stories. Hosting on Vercelensured reliable performance and quick load times, making this a streamlined, budget-friendly solution tailored to the fitness industry.",
+    "image": "Gym1",
+    "category": "freelance",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1h6xKKAdhks3Mrh3wdWYIwkOIpFWi3qyP"
+    }
+  },
+
+  {
+    "name": "Personal Portfolio",
+    "desc": "The portfolio website is constructed using HTML5, CSS3, JavaScript, and jQuery. It also integrates additional tools and libraries such as Particle.js, Typed.js, Tilt.js, Scroll Reveal, Tawk.to, EmailJS, Font Awesome, and JSON. The primary intention behind the website is to serve as a comprehensive showcase of my skills and projects in every domain I have worked on. The contact section includes links to LinkedIn and other social media for easy connection. The website also includes quick links to navigate through sections like home, about, skills, education, work experience, and contact info. The portfolio is designed to highlight my personal ownership and dedication. The website lists education details and work experience.",
+    "image": "PersonalPortfolio2",
+    "category": "personal",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1tfPe_1q0n_klG9tz1__IQexNkXe6DlWz"
+    }
+  },
+
+  {
+    "name": "LCH Device Controller",
+    "desc": "This project is a C# WPF application developed to manage and monitor a video downlink system via laptop. The application provides a user interface for COM port selection, system connection, and status display. It features sections for monitoring health (voltage, temperature, RF output), frequency information (preset, uplink, downlink), and polling status, and it also displays messages from the Ground Control Station (GCS) and a section to send message to the GCS.  The configuration section allows users to adjust downlink frequency, and to select uplink frequency and preset from dropdown menus. Buttons are included for Diagnosis, messaging, and configuration. The application integrates hardware and software for real-time monitoring and control, with a user-friendly interface displaying system parameters, status, and controls. It incorporates: PBIT (Power-Up Built-In Test) refers to the checks performed immediately after the system is powered on. This includes verifying the supplied voltage, ensuring the user interface loads correctly, and confirming that all the parameters on the main page are correctly initialized. IBIT (Initiated Built-In Test) is a diagnostic procedure that users can manually trigger via the IBIT button, providing a comprehensive check of system components and parameters. The IBIT section of the application allows the user to select various parameters to diagnose, such as checking the 28V DC input, 12V DC output, reading the preset, uplink frequency, downlink frequency, video sync, RF output and conducting a VSWR test. CBIT (Continuous Built-In Test) involves ongoing monitoring of the system to ensure continuous reliable operation. The CBIT includes periodic checks of polling status, downlink frequency, uplink frequency, and amplifier module status, which occur every 60 seconds to confirm the system is functioning optimally. The polling status, when active, is indicated by a green circle in the user interface. Additionally, the system uses telemetry to poll and send data between transmitter and receiver. This includes sending the Signal-to-Noise Ratio (SNR) from the receiver to the transmitter.",
+    "image": "LCH1",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1XTMSsRqTKCzb5U-28UDgobsE1IXr_IaY"
+    }
+  },
+
+  {
+    "name": "ICS (Interface Control System)",
+    "desc": "Yet to Update",
+    "image": "Update2",
+    "category": "work1",
+    "links": {
+      "view": "404.html"
+    }
+  },
+
+  {
+    "name": "VMS - Project Management",
+    "desc": "Yet to Update",
+    "image": "Update2",
+    "category": "work1",
+    "links": {
+      "view": "404.html"
+    }
+  }
+]
