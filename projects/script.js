@@ -44,42 +44,44 @@ function showProjects(projects) {
     let projectsHTML = "";
 
     projects.forEach(project => {
-        projectsHTML += `
+      projectsHTML += `
         <div class="grid-item ${project.category}">
-            <div class="box tilt" onclick="openProjectPopup('${project.name}', '${project.desc}', '${project.image}', '${project.links.view}')">
-                <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-                <div class="content">
-                    <div class="tag">
-                        <h3>${project.name}</h3>
-                    </div>
-                    <div class="desc">
-                        <p>${project.desc.length > 100 ? project.desc.substring(0, 100) + "..." : project.desc}</p>
-                        <button class="read-more" onclick="openProjectPopup('${project.name}', '${project.desc}', '${project.image}', '${project.links.view}')">Read More</button>
-                    </div>
-                </div>
+          <div class="box tilt" onclick="openProjectPopup('${project.name}', '${project.desc}', '${project.image}', '${project.links.view}')">
+            <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
+            <div class="content">
+              <div class="tag">
+                <h3>${project.name}</h3>
+              </div>
+              <div class="desc">
+                <p>${project.desc.length > 100 ? project.desc.substring(0, 100) + "..." : project.desc}</p>
+                <button class="read-more" onclick="openProjectPopup('${project.name}', '${project.desc}', '${project.image}', '${project.links.view}')">Read More</button>
+              </div>
             </div>
-        </div>`
+          </div>
+        </div>`;
     });
 
     projectsContainer.innerHTML = projectsHTML;
 
+    // Initialize Isotope on the container
     var $grid = $('.box-container').isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows',
-        masonry: {
-            columnWidth: 200
-        }
+      itemSelector: '.grid-item',
+      layoutMode: 'fitRows'
     });
 
-    // filter items on button click.
+    // Use imagesLoaded to ensure Isotope layout is properly calculated after each image loads
+    $grid.imagesLoaded().progress(function() {
+      $grid.isotope('layout');
+    });
+
+    // Filter items on button click.
     $('.button-group').on('click', 'button', function () {
-        $('.button-group').find('.is-checked').removeClass('is-checked');
-        $(this).addClass('is-checked');
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
+      $('.button-group').find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+      var filterValue = $(this).attr('data-filter');
+      $grid.isotope({ filter: filterValue });
     });
 }
-
 
 // Open the project popup
 function openProjectPopup(name, description, image, viewLink) {

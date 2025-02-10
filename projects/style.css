@@ -241,7 +241,7 @@ header .navbar ul li a:hover {
 }
 
 .work .box-container .box {
-  flex: 1 1 40rem;
+  flex: 1 1 30rem;
   border-radius: .5rem;
   box-shadow: 0 .7rem 1rem rgba(0, 0, 0, .3);
   position: relative;
@@ -359,23 +359,70 @@ header .navbar ul li a:hover {
   transform: translateX(-8px);
 }
 
-@media screen and (max-width: 450px) {
-  .work .button-group {
-    width: 100%;
-  }
+/* ===== Responsive adjustments for the Work section ===== */
 
+/* For medium screens (e.g. tablets) */
+@media screen and (max-width: 1024px) {
+  /* Make the project boxes take up a bit more relative width */
   .work .box-container {
-    margin: 0;
+    gap: 1rem;
+    margin: 1.5rem auto;
   }
+  .work .box-container .box {
+    /* Instead of flex-basis: 30rem, use a percentage with a max-width */
+    flex: 1 1 calc(45% - 1rem);
+    height: 25rem; /* slightly reduce the fixed height */
+  }
+  /* Remove the fixed width from the .tilt element */
   .work .box-container .tilt {
-    width: 350px;
-    margin: 1rem;
-  }
-
-  .work .box-container .grid-item .box {
-    width: 95% !important;
+    width: 100%;
+    margin: 0.5rem;
   }
 }
+
+/* For small screens (e.g. mobile devices) */
+@media screen and (max-width: 768px) {
+  .work .box-container {
+    gap: 0.8rem;
+    margin: 1rem auto;
+  }
+  .work .box-container .box {
+    /* Let the box take the full width (with some horizontal margin) */
+    flex: 1 1 100%;
+    height: 20rem; /* reduce the height further */
+  }
+  .work .box-container .tilt {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  /* Optionally adjust the heading font-size for better scale */
+  .work h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* For extra small screens */
+@media screen and (max-width: 450px) {
+  /* Make the filter buttons stack vertically */
+  .work .button-group {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .work .button-group .btn {
+    width: 90%;
+    margin: 0 auto;
+  }
+  /* Adjust paragraph font-size inside project descriptions */
+  .work .desc p {
+    font-size: 1.2rem;
+  }
+  /* Adjust the back button font sizes if needed */
+  .backbtn .btn span {
+    font-size: 1.5rem;
+  }
+}
+
 /* Work section ends */
 
 /* Popup styles */
