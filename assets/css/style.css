@@ -330,20 +330,28 @@ header .navbar ul li a:hover {
 
 /* hero media queries starts*/
 @media (max-width: 450px) {
+  .home .content {
+    text-align: center;
+  }
+  .home .content h2 {
+    font-size: 3rem;
+  }
+  .home .content h2 span {
+    font-size: 3rem;
+  }
   .home .btn {
-    margin: 4rem 0;
+    margin: 4rem 0;  /* Removes extra vertical spacing; only auto left/right */
+    position: relative; /* Keeps it in the document flow */
+    display: inline-block; /* Allows it to be centered using auto margins */
   }
   .socials {
-    margin-top: 12rem;
-  }
-  .home .image img {
-    margin-top: -12rem;
+    margin-top: 0rem;
   }
   .home .content p {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
   }
   .home .content p span {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
   }
 }
 /* hero media queries ends*/
@@ -657,6 +665,32 @@ header .navbar ul li a:hover {
     margin-right: 1rem;
     flex-wrap: wrap;
   }
+
+  @media screen and (max-width: 450px) {
+  /* Reduce the image height for smaller devices */
+  .education .box-container .box .image {
+    height: 15rem;
+  }
+  /* Slightly reduce heading and paragraph font sizes and margins */
+  .education .box-container .box .content h3 {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+  }
+  .education .box-container .box .content p {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+  }
+  .education h4 {
+    font-size: 1.8rem;
+    margin: 0.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  /* Reduce the image height for smaller devices */
+  .education .box-container .box .image {
+    height: 38rem;
+  }
+}
 }
 /* education media queries ends*/
 /* education section ends */
