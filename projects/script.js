@@ -141,24 +141,6 @@ var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 })();
 // End of Tawk.to Live Chat
 
-// Function to send analytics event
-function trackButtonClick(category) {
-    gtag('event', 'click', {
-        'event_category': 'Project Filter',
-        'event_label': category
-    });
-}
-
-// Attach event listeners to project filter buttons
-document.querySelectorAll('.button-group .btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const category = this.getAttribute('data-filter');
-        trackButtonClick(category);
-    });
-});
-
-//Analytics end
-
 // disable developer mode
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
