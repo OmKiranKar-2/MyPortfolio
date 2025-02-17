@@ -87,6 +87,16 @@ $(document).ready(function () {
     // <!-- emailjs to mail contact form data -->
 });
 
+//Track resume button in google analytics
+
+$('#resumeButton').click(function () {
+    gtag('event', 'Resume Button Clicked', {
+    'event_category': 'Engagement',
+    'event_label': 'Resume Click',
+    'value': 1
+    });
+});
+
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
