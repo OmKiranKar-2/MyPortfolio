@@ -261,7 +261,7 @@
 
   {
     "name": "RF Planning and Strategizing",
-    "desc": "The RF Planning & Strategizing project involved a detailed process of understanding client requirements to plan the best testing approach and locations. This included the creation of a comprehensive Standard Operating Procedure (SOP) that listed all necessary components, both software and hardware, to ensure consistent and repeatable testing. The project required the creation of block diagrams for each testing location, detailing the integration and connectivity of all system components. This work also involved the selection of appropriate antenna types, connectors, and RF cables, alongside choosing suitable SDRs and determining the number of antenna ports. Key considerations included signal attenuation, the required frequency bands, and evaluating the impact of any line-of-sight obstructions. The project also covered planning for all required electronic and networking components, which included cameras, headphones, and amplifiers. Furthermore, the plan specified critical parameters such as streaming type, bandwidth, and attenuation. This complete approach allowed for a structured and efficient RF testing strategy tailored to specific project needs.",
+    "desc": "The RF Planning & Strategizing project entailed a detailed, methodical process of understanding client requirements to define the most effective RF testing strategy, locations, and system design. A key deliverable was the development of a comprehensive Standard Operating Procedure (SOP) that outlined all necessary software and hardware components to ensure standardized, repeatable, and reliable testing outcomes. As part of the planning, block diagrams were created for each testing location, illustrating the integration and connectivity of system elements such as SDRs, antennas, connectors, RF cables, and networking devices. The selection of appropriate antenna types played a vital role. For example, Yagi-Uda antennas, which include a dipole-driven element and several directors, were chosen for point-to-point communication in the UHF band due to their high directionality - where increased directors result in a narrower and more focused beam pattern. The planning also factored in key RF principles such as Far-field and near-field zones, ensuring that both radios in a setup had overlapping radiation patterns for a successful connection, Using repeaters to extend range in long-distance scenarios and strategically placing equipment to avoid obstructions like lightning arresters and foliage, which can absorb or deflect RF waves, Understanding that higher frequency bands offer more bandwidth but at the cost of reduced range and increased attenuation. For instance, the L-band, with its shorter wavelength, can transmit more data bits than UHF, despite UHF having longer range capabilities, The antenna size inversely correlates with frequency - higher frequency bands require smaller antennas, and vice versa, Parabolic antennas were considered for C-band applications, owing to their high gain and precision in directional transmission, Additional planning covered the integration of supporting electronic and networking components such as cameras, headphones, amplifiers, and the specification of essential parameters like streaming type, bandwidth, and attenuation levels. By carefully balancing all these technical and logistical factors, the team was able to deliver a structured and scalable RF testing solution tailored to diverse project needs.",
     "image": "RFPlanning1",
     "category": "rnd",
     "links": {
@@ -320,8 +320,68 @@
   },
 
   {
-    "name": "ICS (Interface Control System)",
-    "desc": "Yet to Update",
+    "name": "BMS (Battlefield Management System)",
+    "desc": "As a Point of Contact for the Battle Management System (BMS), I led the successful development and deployment of Phase 1 of this tactical system designed to enhance military situational awareness and operational command. My responsibilities spanned complete project oversight, from system architecture and hardware-software integration to operational implementation across three key platforms: Handheld Version (HHV), Armoured Fighting Vehicle (AFV), and Track Ground Version (TGV). Key accomplishments includes Integration of ruggedized hardware (tablets, radios, GPS/INS modules, cameras, and headsets), Delivery of advanced GIS capabilities with multi-layer mapping, terrain visualization, and geofencing, Real-time location tracking and communication (text, image, video, audio) over a wireless IP Mesh network, Implementation of live video streaming, system health monitoring, and emergency response features (SOS/Kill Switch), Role-based access control and desktop command tools for full network visibility and management. I successfully navigated technical challenges such as network congestion, data throughput, and real-time media transmission. Our team ensured a robust, secure, and responsive system that significantly improved battlefield coordination and command efficiency.",
+    "image": "BMS1",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1NFhbTg5evNW_Z5ebuuI-9sbNWwK6-Tq6?usp=drive_link"
+    }
+  },
+
+  {
+    "name": "Battery Charger Discharger",
+    "desc": "This Smart Battery Charger & Discharger System is a microcontroller-based solution developed using the Arduino Nano (ATmega328P) to automate battery management with features like one-button operation, real-time voltage monitoring, and automatic transition from discharging to charging. It includes a 2.5-hour timed charging cycle, which resumes accurately after power interruptions using persistent time tracking. A NHC-1.23-inch OLED display provides continuous status updates—even during power loss - showing real-time modes like “Discharging,” “Charging,” “Charge Complete,” and “Main Failure”, with the reverse timer display below. The system incorporates voltage scaling via a resistor divider, relay-based control for switching modes, and LEDs for alerts. Designed with power resilience and user feedback in mind, the project showcases core skills in embedded systems, timing logic, hardware interfacing, and reliable power management.",
+    "image": "Battery1",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1xnWvtv-Shd3jYIKJZcjIcTA7Pjc92DcC?usp=drive_link"
+    }
+  },
+
+  {
+    "name": "Renesas Programming",
+    "desc": "Developed and deployed an embedded system for the EXICOM EX-7100 Manpack Transmitter and Receiver communication modules using the Renesas RL-78 (R5F100FE) microcontroller as the core controller. The system enables real-time configuration of key RF and video parameters, including frequency (320–360 MHz), bandwidth (DVB-T/Narrowband), modulation, FEC, guard interval, output power, and video encoder settings. The microcontroller interfaces with a 7-segment LCD for parameter display, supports UART for serial communication, and includes dedicated programming ports for firmware updates. Firmware was developed and flashed using Renesas Flash Programmer (RFP) and the E1 Emulator, with support for automated erase-and-upload procedures. The project involved end-to-end integration of hardware and software, demonstrating strong expertise in embedded systems, microcontroller programming, and communication module design.",
+    "image": "Renesas1",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1NKcfTv9jBYIsSfqFDMmWfvjBreFP_RLb?usp=drive_link"
+    }
+  },
+
+  {
+    "name": "Customized PCB Design and Deployment",
+    "desc": "This customized PCB project is built around the ATmega2560-16A microcontroller, designed to enable robust communication, efficient power management, and ease of programmability. The ATmega2560 operates with a 16MHz external crystal and features a reset circuit for reliable startup. USB communication is facilitated via a CH340G USB-to-serial converter and a USB Micro-B connector, while RS232 communication is supported through dual MAX3232 ICs for interfacing with legacy serial devices. The board includes a comprehensive power supply section using LM317 adjustable regulators to generate stable +5V and +3.3V rails, supplemented by filtering capacitors and protection diodes. ESD protection is implemented using SRV05-4 arrays and ESD9B5.0ST5G diodes to safeguard sensitive components. Programming and boot loading are made flexible through compatibility with the Arduino as ISP method, enabling firmware uploads and bootloader burning using an Arduino UNO or Mega2560 via the Arduino IDE. This design is optimized for embedded systems applications requiring high I/O availability, multiple communication interfaces, and reliable power distribution.",
+    "image": "CustomPCB1",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/1V7AkfojTWd7Og4Q6vRxG0s5wKxzWRZYl?usp=drive_link"
+    }
+  },
+
+  {
+    "name": "LCH Raspberry Controller",
+    "desc": "A robust, modular 1 and 3-channel receiver control application built for Raspberry Pi (RPi5) using PyQt5. The system unifies DL (downlink), TEL (telemetry/uplink) and DVR control in a single, kiosk-capable UI with per-section apply/refresh actions, real-time home status, and an integrated messaging panel with 10 predefined messages. Back-end integration supports HTTP status/config endpoints for DL hosts, serial/GPIO telemetry for uplink (including AES encryption with 64-char hex keys), and binary DVR command packets. The app implements safe polling via a LoopSystem, GPIO pin management for command mode and flag buttons, suspend/restore semantics during configuration, and visual feedback (overlay/loading screens) for all read/write operations. Designed for reliability on embedded hardware: headless-friendly environment setup, graceful fallbacks when device modules are absent, and clear error handling — ideal for field-deployable telemetry, remote frequency/service management, and DVR control workflows.",
+    "image": "LCH_Raspberry1",
+    "category": "work1",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/18MarVleem8SWmXIDFUZaZOvoknN-Z7qc?usp=drive_link"
+    }
+  },
+
+  {
+    "name": "Maris AI",
+    "desc": "Led R&D and system integration for the Maris video board platform — responsible for end-to-end development, field validation and productization. I owned the board-level integration with our SDR stack (timing, audio/data routing and KLV metadata over UART↔Ethernet), enabled on-board AI (Hailo acceleration + model validation) and implemented low-latency multi-mux streaming (TS/RTP/RTSP/RTMP) with per-mux codec, scaling and VMD controls. I designed and implemented UART/serial command handling for telemetry and DVR control. I also drove performance tuning (bitrate/GOP/jitter buffer), reliability (watchdog, polling/suspend semantics), GPIO-based command modes and flag actions, and led on-site integration, QA and troubleshooting. Delivered user-facing features via Maris Browser/Player (metadata, audio routing, input/output streaming workflows) and authored the user guide and deployment procedures for field teams.",
+    "image": "MarisAI1",
+    "category": "rnd",
+    "links": {
+      "view": "https://drive.google.com/drive/folders/14BK98V_pO7W67MUa839AXPxBkRClaSAd?usp=drive_link"
+    }
+  },
+
+  {
+    "name": "Wireless - Tactical Dismounted Kit",
+    "desc": "",
     "image": "Update2",
     "category": "work1",
     "links": {
@@ -330,7 +390,7 @@
   },
 
   {
-    "name": "VMS - Project Management",
+    "name": "ICS (Interface Control System)",
     "desc": "Yet to Update",
     "image": "Update2",
     "category": "work1",
