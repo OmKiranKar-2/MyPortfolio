@@ -333,7 +333,7 @@
     "name": "Battery Charger Discharger",
     "desc": "This Smart Battery Charger & Discharger System is a microcontroller-based solution developed using the Arduino Nano (ATmega328P) to automate battery management with features like one-button operation, real-time voltage monitoring, and automatic transition from discharging to charging. It includes a 2.5-hour timed charging cycle, which resumes accurately after power interruptions using persistent time tracking. A NHC-1.23-inch OLED display provides continuous status updates—even during power loss - showing real-time modes like “Discharging,” “Charging,” “Charge Complete,” and “Main Failure”, with the reverse timer display below. The system incorporates voltage scaling via a resistor divider, relay-based control for switching modes, and LEDs for alerts. Designed with power resilience and user feedback in mind, the project showcases core skills in embedded systems, timing logic, hardware interfacing, and reliable power management.",
     "image": "Battery1",
-    "category": "Freelance",
+    "category": "freelance",
     "links": {
       "view": "https://drive.google.com/drive/folders/1xnWvtv-Shd3jYIKJZcjIcTA7Pjc92DcC?usp=drive_link"
     }
