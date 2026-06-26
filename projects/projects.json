@@ -396,6 +396,15 @@
     "category": "work1",
     "links": {
       "view": "404.html"
+    },
+
+    {
+    "name": "Exicom Log Reader",
+    "desc": "Yet to Update",
+    "image": "Update2",
+    "category": "work1",
+    "links": {
+      "view": "404.html"
     }
   }
 ]
